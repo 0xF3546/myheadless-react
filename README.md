@@ -6,7 +6,7 @@ A React CMS client for fetching and managing CMS page data using a context API v
 
 ```bash
 npm install myheadless-react
-
+```
 ## Usage
 ```typescript
 import { CMSProvider, useCMS, CMSConfiguration } from 'myheadless-react';
