@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { CMSPageData, ImageBlockData, ImageBlockListData, TextBlockData, TextBlockListData } from "./types/CMSTypes"
 import { createContext, useContext, useState, useRef, useCallback } from "react";
-import { CMSConfiguration } from "./Configuration";
+import { CMSConfig } from "./Configuration";
 
 type CMSContextType = {
     pageData?: CMSPageData | null;
@@ -28,7 +28,9 @@ export const useCMS = (): CMSContextType => {
     return context;
 };
 
-export function CMSProvider({ children, config = new CMSConfiguration("https://api.myheadless.io/cms") }: { children: React.ReactNode, config?: CMSConfiguration }) {
+export function CMSProvider({ children, config = new CMSConfig({
+        baseURL: "https://api.myheadless.io/cms"
+    }) }: { children: React.ReactNode, config?: CMSConfig }) {
     const [pageData, setPageData] = useState<CMSPageData | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
