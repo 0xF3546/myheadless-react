@@ -1,0 +1,47 @@
+{
+  "name": "myheadless-react",
+  "version": "1.0.0",
+  "description": "A React CMS client for fetching and managing CMS page data via myheadless.io",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && rollup -c",
+    "prepublishOnly": "npm run build",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "cms",
+    "context",
+    "typescript",
+    "headless",
+    "myheadless"
+  ],
+  "author": "0xF3546",
+  "license": "MIT",
+  "peerDependencies": {
+    "axios": "^1.11.0",
+    "react": "^19.1.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.3",
+    "@rollup/plugin-node-resolve": "^15.3.1",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/jest": "^29.0.0",
+    "@types/react": "^19.1.0",
+    "jest": "^29.0.0",
+    "rollup": "^4.47.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xF3546/myheadless-react.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
